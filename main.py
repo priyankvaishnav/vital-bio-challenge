@@ -11,7 +11,7 @@ class SecretSanta:
         """Assign gifts to participants."""
         choices = list(self.info.keys())
 
-        # Handle the case where there's only one participant
+        """ Handle the case where there's only one participant"""
         if len(choices) == 1:
             print("Only one participant. Secret Santa can't proceed.")
             return
@@ -30,7 +30,7 @@ class SecretSanta:
             else:
                 self.selection[person] = receiver
                 choices.remove(receiver)
-            print("{} sent gift to {}".format(person, receiver))
+            print("Notifying {} that they are assigned to get a gift for {}".format(self.info[person], receiver))
 
     def file_reader(self):
         """Read participants from the CSV file."""
