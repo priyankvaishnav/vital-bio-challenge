@@ -1,8 +1,12 @@
+"""Author: priyank.vaishnav@gmail.com
+program for setting up secret santa"""
 import csv
 import random
 
 
 class SecretSanta:
+    """ Umbrella class setting for up the dictionary"""
+
     def __init__(self):
         self.info = {}
         self.selection = {}
@@ -11,7 +15,7 @@ class SecretSanta:
         """Assign gifts to participants."""
         choices = list(self.info.keys())
 
-        """ Handle the case where there's only one participant"""
+        # Handle the case where there's only one participant
         if len(choices) == 1:
             print("Only one participant. Secret Santa can't proceed.")
             return
@@ -30,7 +34,9 @@ class SecretSanta:
             else:
                 self.selection[person] = receiver
                 choices.remove(receiver)
-            print("Notifying {} that they are assigned to get a gift for {}".format(self.info[person], receiver))
+            print(
+                f"Notifying {self.info[person]}\
+ that they are assigned to get a gift for {receiver}\n")
 
     def file_reader(self):
         """Read participants from the CSV file."""
@@ -47,7 +53,8 @@ class SecretSanta:
 
 
 def main():
-    print("Secret gift generator")
+    """ main function used for execution"""
+    print("Secret gift generator\n")
     secret_santa = SecretSanta()
     secret_santa.start()
 
