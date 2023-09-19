@@ -15,8 +15,12 @@ We are told that we are working with data given in a file but we do not know the
 We will be having 2 methods doing all of our work, `assign_gifts()` and `file_reader()`
 
 ### `file_reader()` method
-This method will be openining the file named `participants.csv` located in `resources` directory. This method opens the file, and saves the data in the dictionary called `info` saves it in the pair of name and email. 
+This method will be opening the file named `participants.csv` located in `resources` directory. This method opens the file, and saves the data in the dictionary called `info` saves it in the pair of name and email. 
+Here we are not verifying that the email address provided are valid because we do not really send an email.
 
 ### `assign_gifts()` method
 This method is responsible for making sure the gifts are assigned to the person as specified in the challenge and covering the identified edge cases.
 > It might seem that the line where we are removing a participant from the list is useless. However, the said list keeps decreasing every iteration so our processing time is reduced improving the efficiency. 
+
+
+## To run this script clone this repo to your computer and simply run the main.py and it will run the script.
